@@ -1,0 +1,132 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 226 100% 97%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 238 88% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 248 87% 74%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 238 88% 67%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 238 88% 67%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 238 88% 67%;
+    --sidebar-accent: 239 84% 78%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 238 88% 75%;
+    --sidebar-ring: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .insight-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .insight-card {
+    @apply bg-white rounded-lg shadow-sm border p-4;
+  }
+  
+  .insight-table {
+    @apply w-full border-collapse;
+  }
+  
+  .insight-table th {
+    @apply bg-insight-light-blue bg-opacity-30 text-left p-3 font-medium text-gray-700;
+  }
+  
+  .insight-table td {
+    @apply p-3 border-t border-gray-200;
+  }
+  
+  .insight-table tr:nth-child(even) {
+    @apply bg-insight-light-blue bg-opacity-10;
+  }
+  
+  .insight-btn {
+    @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .insight-btn-primary {
+    @apply insight-btn bg-insight-blue text-white hover:bg-insight-blue/90 focus:ring-insight-blue;
+  }
+  
+  .insight-btn-secondary {
+    @apply insight-btn bg-insight-purple text-white hover:bg-insight-purple/90 focus:ring-insight-purple;
+  }
+  
+  .insight-btn-outline {
+    @apply insight-btn bg-white text-insight-blue border border-insight-blue hover:bg-insight-light-blue/20;
+  }
+  
+  .insight-input {
+    @apply w-full rounded-md border border-gray-300 py-2 px-3 focus:outline-none focus:ring-2 focus:ring-insight-blue focus:border-transparent;
+  }
+  
+  .insight-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+  
+  .insight-form-group {
+    @apply mb-4;
+  }
+}
