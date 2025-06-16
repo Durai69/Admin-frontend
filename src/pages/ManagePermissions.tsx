@@ -7,7 +7,7 @@ import { useDepartments } from '@/contexts/DepartmentsContext'; // Ensure this p
 import { DateRangePicker } from '@/components/permissions/DateRangePicker';
 import { BulkActionsCard } from '@/components/permissions/BulkActionsCard';
 import { PermissionSummaryCard } from '@/components/permissions/PermissionSummaryCard';
-import { AxiosError, isAxiosError } from 'axios';
+import axios, { AxiosError, isAxiosError } from 'axios';
 
 
 // Define the structure for your permissions matrix
