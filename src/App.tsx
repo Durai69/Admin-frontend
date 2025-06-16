@@ -14,7 +14,7 @@ import ManagePermissions from "@/pages/ManagePermissions";
 import SurveyReports from "@/pages/SurveyReports";
 import CustomerFocus from "@/pages/CustomerFocus";
 import AccountSettings from "@/pages/AccountSettings";
-import Login from "../../Shared/Login"; // Adjusted path to Shared folder
+import Login from "@/pages/Login"; // Fixed import path to use the correct location
 import NotFound from "@/pages/NotFound";
 
 // Removed direct imports for Header and Sidebar as they are rendered within AppLayout
